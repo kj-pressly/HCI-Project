@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Office Demographics Survey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Patient Demographics Form</h1>
+    <p class="subtitle">Please complete all fields below.</p>
+
+    <form id="demographicsForm">
+      <div class="question">
+        <label for="fullName">1. Legal full name</label>
+        <input id="fullName" name="fullName" type="text" required />
+      </div>
+
+      <div class="question">
+        <label for="dob">2. Date of birth</label>
+        <input id="dob" name="dob" type="date" required />
+      </div>
+
+      <div class="question">
+        <label for="sexAtBirth">3. Sex assigned at birth</label>
+        <select id="sexAtBirth" name="sexAtBirth" required>
+          <option value="">Select one</option>
+          <option>Female</option>
+          <option>Male</option>
+          <option>Intersex</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="genderIdentity">4. Current gender identity</label>
+        <select id="genderIdentity" name="genderIdentity" required>
+          <option value="">Select one</option>
+          <option>Woman</option>
+          <option>Man</option>
+          <option>Non-binary</option>
+          <option>Another identity</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="language">5. Preferred language</label>
+        <input id="language" name="language" type="text" placeholder="e.g., English, Spanish" required />
+      </div>
+
+      <div class="question">
+        <label>6. Race/Ethnicity (select all that apply)</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="race" value="American Indian or Alaska Native" /> American Indian or Alaska Native</label>
+          <label><input type="checkbox" name="race" value="Asian" /> Asian</label>
+          <label><input type="checkbox" name="race" value="Black or African American" /> Black or African American</label>
+          <label><input type="checkbox" name="race" value="Hispanic or Latino" /> Hispanic or Latino</label>
+          <label><input type="checkbox" name="race" value="Native Hawaiian or Other Pacific Islander" /> Native Hawaiian or Other Pacific Islander</label>
+          <label><input type="checkbox" name="race" value="White" /> White</label>
+          <label><input type="checkbox" name="race" value="Prefer not to say" /> Prefer not to say</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label for="maritalStatus">7. Marital status</label>
+        <select id="maritalStatus" name="maritalStatus" required>
+          <option value="">Select one</option>
+          <option>Single</option>
+          <option>Married</option>
+          <option>Partnered</option>
+          <option>Divorced</option>
+          <option>Widowed</option>
+          <option>Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="employment">8. Employment status</label>
+        <select id="employment" name="employment" required>
+          <option value="">Select one</option>
+          <option>Employed full-time</option>
+          <option>Employed part-time</option>
+          <option>Self-employed</option>
+          <option>Student</option>
+          <option>Unemployed</option>
+          <option>Retired</option>
+          <option>Unable to work</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="address">9. Home address</label>
+        <input id="address" name="address" type="text" required />
+      </div>
+
+      <div class="question">
+        <label for="emergencyContact">10. Emergency contact (name and phone)</label>
+        <input id="emergencyContact" name="emergencyContact" type="text" required />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="result" class="result" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
